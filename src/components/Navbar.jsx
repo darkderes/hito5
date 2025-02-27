@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -47,12 +48,11 @@ const NavbarApp = () => {
         </Nav>
 
         <Navbar.Collapse className="justify-content-end">
-          <Nav.Link
-            href="#cart"
-            className="nav-link-border-cart nav-link-custom"
-          >
-            <FaShoppingCart /> $ {total.toLocaleString()}
-          </Nav.Link>
+          <Nav.Item>
+            <Link to="/cart" className="nav-link-border-cart nav-link-custom">
+              <FaShoppingCart /> $ {total.toLocaleString()}
+            </Link>
+          </Nav.Item>
         </Navbar.Collapse>
       </Container>
     </Navbar>
