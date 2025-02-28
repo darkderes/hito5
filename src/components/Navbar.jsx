@@ -13,7 +13,7 @@ import {
 
 const NavbarApp = () => {
   const total = 25000;
-  const token = true;
+  const token = false;
   return (
     <Navbar
       className="bg-body-tertiary text-white "
@@ -23,36 +23,36 @@ const NavbarApp = () => {
       <Container>
         <Navbar.Brand href="#home">Pizzeria Mamma Mia!</Navbar.Brand>
         <Nav className="me-auto">
-          <Link to="/" className="nav-link-border">
+          <Link to="/" className="nav-link border border-white rounded">
             <FaPizzaSlice /> Home
           </Link>
           {!token ? (
             <>
               <Link
                 to="/login"
-                className="nav-link-border"
-                style={{ textDecoration: "none" }}
+                className="nav-link border border-white rounded"
               >
                 <FaSignInAlt /> Login
               </Link>
 
               <Link
                 to="/register"
-                className="nav-link-border"
-                style={{ textDecoration: "none" }}
+                className="nav-link border border-white rounded"
               >
                 <FaUserPlus /> Register
               </Link>
             </>
           ) : (
             <>
-              <Link to="/profile" className="nav-link-border">
+              <Link
+                to="/profile"
+                className="nav-link border border-white rounded"
+              >
                 <FaUser /> Profile
               </Link>
               <Link
                 to="/login"
-                className="nav-link-border"
-                style={{ textDecoration: "none" }}
+                className="nav-link border border-white rounded"
               >
                 <FaSignOutAlt /> Logout
               </Link>

@@ -1,14 +1,15 @@
-// import Cart from "./components/Cart";
 import { BrowserRouter, Route, Routes } from "react-router";
-import Footer from "./components/Footer";
-import LoginPage from "./page/LoginPage";
-import NavbarApp from "./components/Navbar";
-import HomePage from "./page/HomePage";
-import RegisterPage from "./page/RegisterPage";
-import CartPage from "./page/CartPage";
-import PizzaPage from "./page/PizzaPage";
-import ProfilePage from "./page/ProfilePage";
-import NotFoundPage from "./page/NotFoundPage";
+import {
+  NavbarApp,
+  HomePage,
+  RegisterPage,
+  LoginPage,
+  CartPage,
+  PizzaPage,
+  ProfilePage,
+  NotFoundPage,
+  Footer,
+} from "./page/index";
 
 function App() {
   return (
