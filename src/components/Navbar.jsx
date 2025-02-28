@@ -23,33 +23,50 @@ const NavbarApp = () => {
       <Container>
         <Navbar.Brand href="#home">Pizzeria Mamma Mia!</Navbar.Brand>
         <Nav className="me-auto">
-          <Nav.Link href="#home" className="nav-link-border">
+          <Link to="/" className="nav-link-border">
             <FaPizzaSlice /> Home
-          </Nav.Link>
+          </Link>
           {!token ? (
             <>
-              <Nav.Link href="#login" className="nav-link-border">
+              <Link
+                to="/login"
+                className="nav-link-border"
+                style={{ textDecoration: "none" }}
+              >
                 <FaSignInAlt /> Login
-              </Nav.Link>
-              <Nav.Link href="#register" className="nav-link-border">
+              </Link>
+
+              <Link
+                to="/register"
+                className="nav-link-border"
+                style={{ textDecoration: "none" }}
+              >
                 <FaUserPlus /> Register
-              </Nav.Link>
+              </Link>
             </>
           ) : (
             <>
-              <Nav.Link href="#profile" className="nav-link-border">
+              <Link to="/profile" className="nav-link-border">
                 <FaUser /> Profile
-              </Nav.Link>
-              <Nav.Link href="#logout" className="nav-link-border">
+              </Link>
+              <Link
+                to="/login"
+                className="nav-link-border"
+                style={{ textDecoration: "none" }}
+              >
                 <FaSignOutAlt /> Logout
-              </Nav.Link>
+              </Link>
             </>
           )}
         </Nav>
 
         <Navbar.Collapse className="justify-content-end">
           <Nav.Item>
-            <Link to="/cart" className="nav-link-border-cart nav-link-custom">
+            <Link
+              to="/cart"
+              className="nav-link-border-cart nav-link-custom"
+              style={{ textDecoration: "none" }}
+            >
               <FaShoppingCart /> $ {total.toLocaleString()}
             </Link>
           </Nav.Item>
