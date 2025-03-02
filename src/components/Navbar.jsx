@@ -21,23 +21,25 @@ const NavbarApp = () => {
       data-bs-theme="dark"
     >
       <Container>
-        <Navbar.Brand href="#home">Pizzeria Mamma Mia!</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">
+          Pizzeria Mamma Mia!
+        </Navbar.Brand>
         <Nav className="me-auto">
-          <Link to="/" className="nav-link border border-white rounded">
+          <Link to="/" className="nav-link border border-white rounded me-2">
             <FaPizzaSlice /> Home
           </Link>
           {!token ? (
             <>
               <Link
                 to="/login"
-                className="nav-link border border-white rounded"
+                className="nav-link border border-white rounded me-2"
               >
                 <FaSignInAlt /> Login
               </Link>
 
               <Link
                 to="/register"
-                className="nav-link border border-white rounded"
+                className="nav-link border border-white rounded me-2"
               >
                 <FaUserPlus /> Register
               </Link>
@@ -46,13 +48,13 @@ const NavbarApp = () => {
             <>
               <Link
                 to="/profile"
-                className="nav-link border border-white rounded"
+                className="nav-link border border-white rounded me-2"
               >
                 <FaUser /> Profile
               </Link>
               <Link
                 to="/login"
-                className="nav-link border border-white rounded"
+                className="nav-link border border-white rounded me-2"
               >
                 <FaSignOutAlt /> Logout
               </Link>
